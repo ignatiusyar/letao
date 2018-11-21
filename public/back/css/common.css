@@ -15,6 +15,12 @@ a:active {
   text-decoration: none;
 }
 
+/* 表格样式 */
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
 /* 登录窗体 */
 .panel .panel-title {
   height: 40px;
@@ -97,6 +103,10 @@ a:active {
   display: block;
   border-left: 3px solid transparent;
   padding-left: 40px;
+}
+.lt_aside .s_nav li a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #069;
 }
 .lt_aside .s_nav li i {
   margin-right: 5px;
