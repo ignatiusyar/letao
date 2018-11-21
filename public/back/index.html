@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘后台管理系统首页</title>
+    <title>乐淘商城后台管理系统</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    乐淘后台管理系统首页
+    <!-- 左侧内容区 -->
+    <div class="lt_aside">
+        <!-- 标题 -->
+        <div class="brand">
+            <a href="#">乐淘后台管理系统</a>
+        </div>
+        <!-- 用户信息 -->
+        <div class="user">
+            <img src="./images/default.png" alt="">
+            <p>超级管理员</p>
+        </div>
+        <!-- 侧边导航 -->
+        <div class="s_nav">
+            <ul>
+                <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+                <li>
+                  <a href="javascript:;" id="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
+                  <!-- 二级列表 -->
+                  <div class="child">
+                    <a href="first.html">一级分类</a>
+                    <a href="second.html">二级分类</a>
+                  </div>
+                </li>
+                <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 右侧主体区域 -->
+    <div class="lt_main">
+        <!-- 顶部topbar区域 -->
+        <div class="lt_topbar">
+            <a class="icon_left pull-left" href="#"><i class="glyphicon glyphicon-align-justify"></i></a>
+            <a class="icon_right pull-right" href="#"><i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+        <!-- 流式布局 -->
+        <div class="container-fluid">
+            <ol class="breadcrumb mt_20">
+                <li><a href="#">管理系统</a></li>
+                <li class="active">首页</li>
+            </ol>
+        </div>
+    </div>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./js/common.js"></script>
 </body>
+
 </html>
