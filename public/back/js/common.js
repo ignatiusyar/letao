@@ -1,17 +1,19 @@
+
+// ajax 全局进度条
+$( document ).ajaxStart(function() {
+    NProgress.start();
+});
+$( document ).ajaxStop(function() {
+    NProgress.done();
+});
+
+
 $(function(){
 
     // 功能需求 : 登录拦截,对于未登录用户,拦截到登录页
     // 由于前段不知道用户的当前登录状态,但后台知道,所以需要发送ajax请求来获取
 
 
-
-    // ajax 全局进度条
-    $( document ).ajaxStart(function() {
-        NProgress.start();
-    });
-    $( document ).ajaxStop(function() {
-        NProgress.done();
-    });
 
     // 公用的功能
     // 1. 左侧二级菜单切换
