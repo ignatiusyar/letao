@@ -21,7 +21,7 @@ $(function () {
             success: function (info) {
                 // console.log(info);
                 // template ( 模板id,数据对象 )
-                var htmlStr = template("firstTmp", info);
+                var htmlStr = template("userTmp", info);
                 $("tbody").html(htmlStr);
 
                 // 根据后台返回的数据,进行分页初始化
