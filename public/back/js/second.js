@@ -17,7 +17,7 @@ $(function() {
       },
       dataType: "json",
       success: function( info ) {
-        console.log( info );
+        // console.log( info );
         var htmlStr = template( 'secondTpl', info )
         $('tbody').html( htmlStr );
 
@@ -41,7 +41,7 @@ $(function() {
   // 2. 点击添加分类按钮, 显示模态框
   $('#addBtn').click(function() {
     $('#addModal').modal("show");
-
+    var total;
     // 发送 ajax 请求, 请求所有的一级分类列表, 进行渲染
     // 通过传参 page=1 pageSize=100 模拟请求所有一级分类列表的接口
     $.ajax({
@@ -49,11 +49,12 @@ $(function() {
       url: "/category/queryTopCategoryPaging",
       data: {
         page: 1,
-        pageSize: 100
+        pageSize: total
       },
       dataType: "json",
       success: function( info ) {
-        console.log( info );
+        // console.log( info );
+        total = info.total;
         var htmlStr = template( "dropdownTpl", info );
         $('.dropdown-menu').html( htmlStr );
       }
@@ -154,6 +155,9 @@ $(function() {
             currentPage = 1;
             render();
             $('#form').data("bootstrapValidator").resetForm(true);
+
+            $('#dropdownText').text("请选择一级分类");
+            $('#imgBox img').attr("src", "./images/none.jpg");
           }
         }
       })
